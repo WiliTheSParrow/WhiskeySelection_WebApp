@@ -382,14 +382,17 @@ body {
 
         display: flex;
         flex-direction: column-reverse;
-        height: 98vh;
+        height: 95vh;
         margin: 5rem 0;
         border-radius: 5px;
         background-image: linear-gradient(to right bottom,
                 rgba($color-grey-medium-1, 0.9),
                 rgba($color-grey-medium-1, 0.8)), url(../img/whiskey-glass.jpg);
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        // background-size: 100% 100%;
+        background-size: cover;
+        background-position: top;
+        position: relative;
 
         @include respond(phone) {
             flex-direction: row;
@@ -416,7 +419,7 @@ body {
                 text-transform: uppercase;
                 letter-spacing: -.2rem;
                 font-weight: 700;
-                font-size: 3.8rem;
+                font-size: 4rem;
                 font-style: italic;
                 line-height: 1;
 
@@ -428,7 +431,7 @@ body {
 
             &--teaser {
                 width: 82%;
-                font-size: 1.4rem;
+                font-size: 2rem;
 
                 @include respond(phone) {
                     width: 100%;

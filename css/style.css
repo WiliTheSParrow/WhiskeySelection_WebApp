@@ -360,13 +360,15 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  height: 98vh;
+  height: 95vh;
   margin: 5rem 0;
   border-radius: 5px;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(51, 51, 50, 0.9)), to(rgba(51, 51, 50, 0.8))), url(../img/whiskey-glass.jpg);
   background-image: linear-gradient(to right bottom, rgba(51, 51, 50, 0.9), rgba(51, 51, 50, 0.8)), url(../img/whiskey-glass.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: top;
+  position: relative;
 }
 
 @media only screen and (max-width: 34em) {
@@ -400,7 +402,7 @@ body {
   text-transform: uppercase;
   letter-spacing: -.2rem;
   font-weight: 700;
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-style: italic;
   line-height: 1;
 }
@@ -414,7 +416,7 @@ body {
 
 .content__advert-titles--teaser {
   width: 82%;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 @media only screen and (max-width: 34em) {
