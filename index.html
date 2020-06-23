@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/icon-whiskey.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <title>Whiskey Selection</title>
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <h1 class="header__title">Whiskey Selection</h1>
+            <nav class="sidebar">
+                <ul class="side-nav">
+                    <li v-for="region in regions" v-on:click="setActiveRegion(region)"
+                        v-bind:class="region==activeBtn ? 'side-nav__item side-nav__item active':'side-nav__item side-nav__item'">
+                        <span>{{region}}</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <section class="content__whiskeys">
+                <div class="feature-boxes" v-for="whiskey in filteredWhiskies" v-on:click="goToWebsite(whiskey.uri)">
+                    <div class="feature-box feature-box--desc">
+                        <h3 class="whiskeyinfo whiskeyinfo--main">{{whiskey.title}}</h3>
+                        <p class="whiskeyinfo--region">{{whiskey.region}} Region</p>
+                        <h3 class="whiskeyinfo--main">${{whiskey.cost}}</h3>
+                    </div>
+                    <div v-bind:class="'feature-box feature-box--notes ' + whiskey.region">
+                        <div class="note" v-for="note in whiskey.tasting_notes">
+                            <p>{{note}}</p>
+                        </div>
+                    </div>
+                    <div v-bind:class="'feature-box feature-box--line ' + whiskey.region"></div>
+                    <div class="feature-box feature-box--picture">
+                        <img v-bind:src="'/img/'+whiskey.image" alt="whiskey">
+                    </div>
+                </div>
+            </section>
+            <section class="content__advert">
+                <div class="content__advert-titles" v-for="article in articles">
+                    <h2 class="content__advert-titles--title">{{article.title}}</h2>
+                    <p class="content__advert-titles--teaser">{{article.teaser}}</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

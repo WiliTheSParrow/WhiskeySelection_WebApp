@@ -1,0 +1,374 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__title {
+  margin: 3rem 0 1.5rem 0;
+  font-size: 7.5rem;
+  font-weight: 700;
+  letter-spacing: -.5rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 34em) {
+  .header__title {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+.sidebar {
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.side-nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 34em) {
+  .side-nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.5rem;
+  }
+}
+
+.side-nav__item::first-letter {
+  text-transform: uppercase;
+}
+
+.side-nav__item, .side-nav__item:link, .side-nav__item:visited {
+  margin: 0 .2rem;
+  padding: .8rem 2rem;
+  border: 0.8px solid #e0e0e0;
+  color: #797676;
+  border-radius: 40px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.side-nav__item:hover {
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.side-nav__item:after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.side-nav__item:active, .side-nav__item:focus {
+  outline: none;
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.side-nav .active {
+  background-color: #f2f3f3;
+  color: #000;
+}
+
+.side-nav .active:hover {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.content {
+  margin: 0 5vw 0 5vw;
+  padding: 1.5rem 0;
+}
+
+@media only screen and (max-width: 34em) {
+  .content {
+    margin: 0;
+  }
+}
+
+.content__whiskeys {
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content__whiskeys .feature-boxes {
+  height: 54.4rem;
+  margin-bottom: 10rem;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3.6rem 23rem 3.6rem 1fr 3.6rem;
+      grid-template-columns: 3.6rem 23rem 3.6rem 1fr 3.6rem;
+  -ms-grid-rows: 1fr .4rem 1fr 1fr 3.6rem 6rem 3.6rem;
+      grid-template-rows: 1fr .4rem 1fr 1fr 3.6rem 6rem 3.6rem;
+  background-image: url("/img/card-bg.svg"), -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 0.9)), color-stop(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.9)));
+  background-image: url("/img/card-bg.svg"), linear-gradient(to left bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.content__whiskeys .feature-boxes:hover {
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.content__whiskeys .feature-boxes:after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.content__whiskeys .feature-boxes:active, .content__whiskeys .feature-boxes:focus {
+  outline: none;
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.content__whiskeys .feature-boxes .feature-box--desc {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.content__whiskeys .feature-boxes .feature-box--desc .whiskeyinfo--main {
+  color: #fff;
+  font-size: 3.6rem;
+}
+
+.content__whiskeys .feature-boxes .feature-box--desc .whiskeyinfo--main::first-letter {
+  text-transform: uppercase;
+}
+
+.content__whiskeys .feature-boxes .feature-box--desc .whiskeyinfo--region {
+  color: #797676;
+  font-size: 1.8rem;
+}
+
+.content__whiskeys .feature-boxes .feature-box--desc .whiskeyinfo--region::first-letter {
+  text-transform: uppercase;
+}
+
+.content__whiskeys .feature-boxes .feature-box--notes {
+  -ms-grid-row: 6;
+  grid-row: 6;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 3.6rem;
+  border: none;
+  border-radius: 5px;
+  -webkit-transform: skewX(-12deg) translateX(-2rem);
+          transform: skewX(-12deg) translateX(-2rem);
+  z-index: 20;
+  color: #fff;
+}
+
+.content__whiskeys .feature-boxes .feature-box--notes .note {
+  text-align: center;
+  font-size: 1.4rem;
+  text-decoration: none;
+  -webkit-transform: skew(12deg);
+          transform: skew(12deg);
+}
+
+.content__whiskeys .feature-boxes .feature-box--notes .note::first-letter {
+  text-transform: uppercase;
+}
+
+.content__whiskeys .feature-boxes .feature-box--notes .note:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.content__whiskeys .feature-boxes .feature-box--line {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 5;
+  grid-column: 5;
+  border: none;
+  width: 6rem;
+  height: .4rem;
+  z-index: 20;
+}
+
+.content__whiskeys .feature-boxes .feature-box--picture {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 5;
+  grid-row: 3/8;
+  -ms-grid-column: 4;
+  grid-column: 4;
+  z-index: 20;
+}
+
+.content__whiskeys .feature-boxes .feature-box--picture img {
+  width: 16rem;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+.content .islands {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#D71E44), to(#9E1B34));
+  background-image: linear-gradient(to right top, #D71E44, #9E1B34);
+}
+
+.content .islay {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#A5238E), to(#6E2671));
+  background-image: linear-gradient(to right top, #A5238E, #6E2671);
+}
+
+.content .highlands {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#563494), to(#322773));
+  background-image: linear-gradient(to right top, #563494, #322773);
+}
+
+.content .lowlands {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#0663AE), to(#174272));
+  background-image: linear-gradient(to right top, #0663AE, #174272);
+}
+
+.content .speyside {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#1AB467), to(#007B46));
+  background-image: linear-gradient(to right top, #1AB467, #007B46);
+}
+
+.content .campbeltown {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#F3B41B), to(#D29D2A));
+  background-image: linear-gradient(to right top, #F3B41B, #D29D2A);
+}
+
+.content__advert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  height: 98vh;
+  margin: 5rem 0;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(51, 51, 50, 0.9)), to(rgba(51, 51, 50, 0.8))), url(../img/whiskey-glass.jpg);
+  background-image: linear-gradient(to right bottom, rgba(51, 51, 50, 0.9), rgba(51, 51, 50, 0.8)), url(../img/whiskey-glass.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@media only screen and (max-width: 34em) {
+  .content__advert {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 2rem 2rem;
+  }
+}
+
+.content__advert-titles {
+  padding-left: 6rem;
+  color: #fff;
+  width: 50%;
+  height: 30%;
+}
+
+@media only screen and (max-width: 34em) {
+  .content__advert-titles {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.content__advert-titles--title {
+  width: 60%;
+  text-transform: uppercase;
+  letter-spacing: -.2rem;
+  font-weight: 700;
+  font-size: 3.8rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 34em) {
+  .content__advert-titles--title {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.content__advert-titles--teaser {
+  width: 82%;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 34em) {
+  .content__advert-titles--teaser {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

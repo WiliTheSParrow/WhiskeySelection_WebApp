@@ -1,0 +1,74 @@
+[
+	{
+		"title": "glenmorangie",
+		"image": "glenmorangie.png",
+		"cost": 36,
+		"region": "highlands",
+		"tasting_notes": ["citrus", "vanilla", "orange"],
+		"uri": "/glenmorangie"
+	},
+	{
+		"title": "Auchentoshan",
+		"image": "auchentoshan.png",
+		"cost": 25,
+		"region": "lowlands",
+		"tasting_notes": ["honey", "citrus", "nuttines"],
+		"uri": "/auchentoshan"
+	},
+	{
+		"title": "ardbeg",
+		"image": "ardbeg.png",
+		"cost": 32,
+		"region": "islay",
+		"tasting_notes": ["chocolate", "cinnamon"],
+		"uri": "/ardbeg"
+	},
+	{
+		"title": "lagavulin",
+		"image": "lagavulin.png",
+		"cost": 157,
+		"region": "islay",
+		"tasting_notes": ["wood", "seaweed"],
+		"uri": "/lagavulin"
+	},
+	{
+		"title": "Bruichladdich",
+		"image": "bruichladdich.png",
+		"cost": 32,
+		"region": "islay",
+		"tasting_notes": ["barley", "fruit"],
+		"uri": "/bruichladdich"
+	},
+	{
+		"title": "talisker",
+		"image": "talisker.png",
+		"cost": 6,
+		"region": "islands",
+		"tasting_notes": ["berries", "smoke"],
+		"uri": "/talisker"
+	},
+	{
+		"title": "macallan",
+		"image": "macallan.png",
+		"cost": 65,
+		"region": "speyside",
+		"tasting_notes": ["vanilla"],
+		"uri": "/macallan"
+	},
+	{
+		"title": "Glenlivet",
+		"image": "glenlivet.png",
+		"cost": 36,
+		"region": "speyside",
+		"tasting_notes": ["buttery", "almond", "spice"],
+		"uri": "/glenlivet"
+	},
+	{
+		"title": "Springbank",
+		"image": "springbank.png",
+		"cost": 12,
+		"region": "campbeltown",
+		"tasting_notes": ["chestnut" ,"citrus"],
+		"uri": "/springbank"
+	}
+]

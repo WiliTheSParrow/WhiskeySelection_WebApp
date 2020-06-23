@@ -1,0 +1,416 @@
+///////////////////////////////////////
+//COLOUR VARIABLES
+$color-islands-light: #D71E44;
+$color-islands-dark: #9E1B34;
+$color-islay-light: #A5238E;
+$color-islay-dark: #6E2671;
+$color-highlands-light: #563494;
+$color-highlands-dark: #322773;
+$color-lowlands-light: #0663AE;
+$color-lowlands-dark: #174272;
+$color-speyside-light: #1AB467;
+$color-speyside-dark: #007B46;
+$color-campbeltown-light: #F3B41B;
+$color-campbeltown-dark: #D29D2A;
+$color-grey-dark: #060808;
+$color-grey-medium-1: #333332;
+$color-grey-medium-2: #797676;
+$color-grey-light-1: #e0e0e0;
+$color-grey-light-2: #f2f3f3;
+
+///////////////////////////////////////
+//MIXINS
+//1em = 16px
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 34em) {
+            @content
+        }
+
+        ;
+
+        // 544px
+    }
+
+    @if $breakpoint==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+
+        ;
+
+        // 900px
+    }
+
+    @if $breakpoint==tablet {
+        @media only screen and (max-width: 71em) {
+            @content
+        }
+
+        ;
+
+        // 1136px
+    }
+
+    @if $breakpoint==desktop {
+        @media only screen and (max-width: 103em) {
+            @content
+        }
+
+        ;
+
+        // 1648px
+    }
+
+    @if $breakpoint==big-desktop {
+        @media only screen and (min-width: 112.5em) {
+            @content
+        }
+
+        ;
+
+        // 1800px
+    }
+
+}
+
+///////////////////////////////////////
+//BUTTON ANIMATION
+@mixin btnanimation() {
+    &:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: 0 1rem 2rem rgba(#000, .2);
+    }
+
+    &:after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem rgba(#000, .2);
+    }
+}
+
+///////////////////////////////////////
+//CLEARFIX
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //1 rem = 10px; 10px/16px=62.5%
+
+    @include respond(tablet) {
+        // width < 1200?
+        font-size: 56.25%; //1rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) {
+        // width < 900?
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+///////////////////////////////////////
+//HEADER & NAVBAR
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        margin: 3rem 0 1.5rem 0;
+        font-size: 7.5rem;
+        font-weight: 700;
+        letter-spacing: -.5rem;
+        font-style: italic;
+        text-transform: uppercase;
+
+        @include respond(phone) {
+            font-size: 4rem;
+            text-align: center;
+        }
+    }
+}
+
+.sidebar {
+    padding: 1.5rem 0 1.5rem 0;
+
+}
+
+.side-nav {
+    list-style: none;
+    display: flex;
+
+    @include respond(phone) {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    &__item {
+        &::first-letter {
+            text-transform: uppercase;
+        }
+
+        &,
+        &:link,
+        &:visited {
+            margin: 0 .2rem;
+            padding: .8rem 2rem;
+            border: .8px solid $color-grey-light-1;
+            color: $color-grey-medium-2;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        @include btnanimation;
+
+    }
+
+    .active {
+        background-color: $color-grey-light-2;
+        color: #000;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
+
+///////////////////////////////////////
+//CONTENT
+.content {
+    margin: 0 5vw 0 5vw;
+    padding: 1.5rem 0;
+
+
+    @include respond(phone) {
+        margin: 0;
+    }
+
+    &__whiskeys {
+        margin: 5rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+        .feature-boxes {
+            height: 54.4rem;
+            margin-bottom: 10rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .3s;
+            @include btnanimation;
+
+            display: grid;
+            grid-template-columns: 3.6rem 23rem 3.6rem 1fr 3.6rem;
+            grid-template-rows: 1fr .4rem 1fr 1fr 3.6rem 6rem 3.6rem;
+
+            background-image: url('/img/card-bg.svg'), linear-gradient(to left bottom, rgba(#000, 0.9), rgba(#000, 0.8), rgba(#000, 0.9));
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+
+
+            .feature-box {
+
+                &--desc {
+                    grid-row: 4;
+                    grid-column: 2;
+
+                    .whiskeyinfo {
+                        &--main {
+                            color: #fff;
+                            font-size: 3.6rem;
+
+                            &::first-letter {
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        &--region {
+                            color: $color-grey-medium-2;
+                            font-size: 1.8rem;
+
+                            &::first-letter {
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+
+                &--notes {
+                    grid-row: 6;
+                    width: max-content;
+
+                    display: flex;
+                    align-items: center;
+                    padding: 2rem 3.6rem;
+
+                    border: none;
+                    border-radius: 5px;
+                    transform: skewX(-12deg) translateX(-2rem);
+                    z-index: 20;
+                    color: #fff;
+
+                    .note {
+                        text-align: center;
+                        font-size: 1.4rem;
+                        text-decoration: none;
+                        transform: skew(12deg);
+
+                        &::first-letter {
+                            text-transform: uppercase;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+
+                &--line {
+                    grid-row: 2;
+                    grid-column: 5;
+                    border: none;
+
+                    width: 6rem;
+                    height: .4rem;
+                    z-index: 20;
+                }
+
+                &--picture {
+                    grid-row: 3/8;
+                    grid-column: 4;
+                    z-index: 20;
+
+                    img {
+                        width: 16rem;
+                        transform: translateY(-20%);
+
+                    }
+                }
+            }
+        }
+    }
+
+    ///////////////////////////////////////
+    //COLOUR VARIATIONS FOR REGIONS
+    .islands {
+        background-image: linear-gradient(to right top, $color-islands-light, $color-islands-dark);
+    }
+
+    .islay {
+        background-image: linear-gradient(to right top, $color-islay-light, $color-islay-dark);
+    }
+
+    .highlands {
+        background-image: linear-gradient(to right top, $color-highlands-light, $color-highlands-dark);
+    }
+
+    .lowlands {
+        background-image: linear-gradient(to right top, $color-lowlands-light, $color-lowlands-dark);
+    }
+
+    .speyside {
+        background-image: linear-gradient(to right top, $color-speyside-light, $color-speyside-dark);
+    }
+
+    .campbeltown {
+        background-image: linear-gradient(to right top, $color-campbeltown-light, $color-campbeltown-dark);
+    }
+
+    &__advert {
+
+        display: flex;
+        flex-direction: column-reverse;
+        height: 98vh;
+        margin: 5rem 0;
+        border-radius: 5px;
+        background-image: linear-gradient(to right bottom,
+                rgba($color-grey-medium-1, 0.9),
+                rgba($color-grey-medium-1, 0.8)), url(../img/whiskey-glass.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        @include respond(phone) {
+            flex-direction: row;
+            padding: 2rem 2rem;
+        }
+
+        &-titles {
+            padding-left: 6rem;
+            color: #fff;
+            width: 50%;
+            height: 30%;
+
+            @include respond(phone) {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding-left: 0;
+
+            }
+
+
+            &--title {
+                width: 60%;
+                text-transform: uppercase;
+                letter-spacing: -.2rem;
+                font-weight: 700;
+                font-size: 3.8rem;
+                font-style: italic;
+                line-height: 1;
+
+                @include respond(phone) {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            &--teaser {
+                width: 82%;
+                font-size: 1.4rem;
+
+                @include respond(phone) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
