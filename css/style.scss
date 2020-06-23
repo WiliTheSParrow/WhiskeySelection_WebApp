@@ -115,16 +115,16 @@ $color-grey-light-2: #f2f3f3;
 }
 
 html {
-    font-size: 62.5%; //1 rem = 10px; 10px/16px=62.5%
+    font-size: 50%; //1 rem = 10px; 10px/16px=62.5%
 
     @include respond(tablet) {
         // width < 1200?
-        font-size: 56.25%; //1rem = 9px, 9/16 = 50%
+        font-size: 47%; //1rem = 9px, 9/16 = 50%
     }
 
     @include respond(tab-port) {
         // width < 900?
-        font-size: 50%; //1rem = 8px, 8/16 = 50%
+        font-size: 35%; //1rem = 8px, 8/16 = 50%
     }
 
     @include respond(big-desktop) {
@@ -167,6 +167,10 @@ body {
 .sidebar {
     padding: 1.5rem 0 1.5rem 0;
 
+    @include respond(phone) {
+        padding: 0;
+    }
+
 }
 
 .side-nav {
@@ -194,6 +198,10 @@ body {
             border-radius: 40px;
             cursor: pointer;
             transition: all .3s;
+
+            @include respond(phone) {
+                margin: .5rem .2rem;
+            }
         }
 
         @include btnanimation;
@@ -218,16 +226,25 @@ body {
     padding: 1.5rem 0;
 
 
+    @include respond(tab-port) {
+        margin: 0 9vw;
+    }
+
     @include respond(phone) {
         margin: 0;
+        padding: 0;
     }
 
     &__whiskeys {
+        border: 2px solid orangered;
         margin: 5rem 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
+        @include respond(phone) {
+            justify-content: space-around;
+        }
 
         .feature-boxes {
             height: 54.4rem;
@@ -246,7 +263,10 @@ body {
             background-size: cover;
             background-position: right;
 
-           
+            @include respond(tab-port) {
+                height: 50rem;
+
+            }
 
             .feature-box {
 
@@ -328,7 +348,7 @@ body {
                 }
             }
 
-            
+
         }
     }
 
