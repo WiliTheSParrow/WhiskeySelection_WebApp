@@ -11,6 +11,24 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 71em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 68%;
+  }
+}
+
 body {
   background: #fff;
   color: #000;
