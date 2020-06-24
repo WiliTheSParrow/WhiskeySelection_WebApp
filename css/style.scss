@@ -352,6 +352,10 @@ body {
         }
     }
 
+    .twoBottle {
+        justify-content: space-around;
+    }
+
     ///////////////////////////////////////
     //COLOUR VARIATIONS FOR REGIONS
     .islands {
@@ -405,6 +409,7 @@ body {
             padding: 2rem 2rem;
             border-radius: 0;
             margin: 0;
+
         }
 
         &-titles {
@@ -417,11 +422,13 @@ body {
             @include respond(tab-port) {
                 width: 80vw;
                 padding: 10rem 6rem;
+                height: min-content;
             }
 
             @include respond(phone) {
                 width: 80vw;
-                padding: 6rem 2rem;
+                padding: 6rem 1rem;
+
 
             }
 

@@ -321,6 +321,11 @@ body {
           transform: translateY(-20%);
 }
 
+.content .twoBottle {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .content .islands {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#D71E44), to(#9E1B34));
   background-image: linear-gradient(to right top, #D71E44, #9E1B34);
@@ -406,13 +411,16 @@ body {
   .content__advert-titles {
     width: 80vw;
     padding: 10rem 6rem;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
   }
 }
 
 @media only screen and (max-width: 34em) {
   .content__advert-titles {
     width: 80vw;
-    padding: 6rem 2rem;
+    padding: 6rem 1rem;
   }
 }
 

@@ -6,7 +6,8 @@ var app = new Vue({
         regions: ['all'],
         activeBtn: "all",
         filteredWhiskies: [],
-        isactive: false
+        isactive: false,
+        twoWhiskey: false
 
     },
 
@@ -31,6 +32,11 @@ var app = new Vue({
                 .catch(error => error);
         },
 
+        setWhiskeyCardUI: function () {
+            var whiskeyArrayLength = this.filteredWhiskies.length === 2;
+            whiskeyArrayLength ? this.twoWhiskey = true : this.twoWhiskey = false;
+        },
+
         setActiveRegion: function (btn) {
             this.activeBtn = btn;
             this.clearFilteredWhiskies();
@@ -39,6 +45,8 @@ var app = new Vue({
             } else {
                 this.fillFilteredWhiskies(btn);
             }
+
+            this.setWhiskeyCardUI();
         },
 
         clearFilteredWhiskies: function () {
@@ -69,5 +77,8 @@ var app = new Vue({
             }
             this.regions.sort();
         }
+
+
+
     }
 });

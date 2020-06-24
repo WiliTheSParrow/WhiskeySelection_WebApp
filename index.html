@@ -24,7 +24,7 @@
             </nav>
         </header>
         <div class="content">
-            <section class="content__whiskeys">
+            <section v-bind:class="twoWhiskey ? 'content__whiskeys twoBottle':'content__whiskeys'">
                 <div class="feature-boxes" v-for="whiskey in filteredWhiskies" v-on:click="goToWebsite(whiskey.uri)">
                     <div class="feature-box feature-box--desc">
                         <h3 class="whiskeyinfo whiskeyinfo--main">{{whiskey.title}}</h3>
