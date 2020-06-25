@@ -38,18 +38,11 @@ var app = new Vue({
             whiskeyArrayLength ? this.twoWhiskey = true : this.twoWhiskey = false;
         },
 
-        // Sets the activeBtn(region). Calls the necessary filtering function regarding the activeBtn to set the filteredWhiskies array, calls the function which clears the array plus calls the setWhiskeyCardUI function if UI change needed.
+        // Sets the activeBtn(region), calls the function which clears the array, calls the necessary filtering function regarding the region to set the filteredWhiskies array, calls the setWhiskeyCardUI function to set the UI.
         setActiveRegion: function (btn) {
             this.activeBtn = btn;
             this.clearFilteredWhiskies();
-
-            // btn == 'all'
-            if (btn == 'all') {
-                this.getAllWhiskies();
-            } else {
-                this.fillFilteredWhiskies(btn);
-            }
-
+            this.activeBtn == 'all' ? this.getAllWhiskies() : this.fillFilteredWhiskies(btn);
             this.setWhiskeyCardUI();
         },
 
