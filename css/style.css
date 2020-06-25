@@ -179,7 +179,7 @@ body {
           justify-content: space-between;
 }
 
-@media only screen and (max-width: 34em) {
+@media only screen and (max-width: 56.25em) {
   .content__whiskeys {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -449,6 +449,21 @@ body {
 @media only screen and (max-width: 34em) {
   .content__advert-titles--teaser {
     width: 100%;
+  }
+}
+
+.copyright {
+  text-align: center;
+  color: #444;
+}
+
+.copyright a, .copyright a:link, .copyright a:visited {
+  color: #444;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .copyright {
+    padding: 1rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

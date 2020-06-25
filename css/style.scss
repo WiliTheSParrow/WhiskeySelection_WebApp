@@ -242,7 +242,7 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             justify-content: space-around;
         }
 
@@ -457,5 +457,22 @@ body {
                 }
             }
         }
+    }
+}
+
+.copyright {
+    text-align: center;
+    color: #444;
+
+    a {
+        &,
+        &:link,
+        &:visited {
+            color: #444;
+        }
+    }
+
+    @include respond(tab-port){
+        padding: 1rem 0;
     }
 }
