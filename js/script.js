@@ -46,16 +46,21 @@ var app = new Vue({
             this.setWhiskeyCardUI();
         },
 
+        // Clears the filteredWhiskies array.
         clearFilteredWhiskies: function () {
             this.filteredWhiskies = [];
         },
 
+        // Fills the filteredWhiskies array with the active region whiskies.
         fillFilteredWhiskies: function (region) {
             for (var i = 0; i < this.allWhiskies.length; i++) {
                 if (this.activeBtn == region && this.allWhiskies[i].region == region) {
                     this.filteredWhiskies.push(this.allWhiskies[i]);
                 }
             }
+
+
+            //
         },
 
         getAllWhiskies: function () {
