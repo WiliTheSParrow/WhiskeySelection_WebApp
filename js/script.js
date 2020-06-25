@@ -60,20 +60,23 @@ var app = new Vue({
             });
         },
 
+        // Fills the filteredWhiskies array with all region whiskies.
         getAllWhiskies: function () {
             this.filteredWhiskies = this.allWhiskies;
         },
 
+        // Sets the webpage URLs for the whiskey cards from JSON files.
         goToWebsite: function (uri) {
             window.open(this.articles[0].url + uri, '_blank');
         },
 
+        // Collects and sorts the regions from JSON file to set up the menu bar on the UI.
         collectRegions: function () {
-            for (var i = 0; i < this.allWhiskies.length; i++) {
-                if (!this.regions.includes(this.allWhiskies[i].region)) {
-                    this.regions.push(this.allWhiskies[i].region);
+            this.allWhiskies.map(el => {
+                if (!this.regions.includes(el.region)) {
+                    this.regions.push(el.region);
                 }
-            }
+            });
             this.regions.sort();
         }
     }
