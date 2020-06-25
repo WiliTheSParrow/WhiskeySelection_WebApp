@@ -32,14 +32,18 @@ var app = new Vue({
                 .catch(error => error);
         },
 
+        // Sets the twoWhiskey to true/false. Controls the UI if there is only two whiskey it changes the justify-content to space-around or space-between by adding the necessary class name in the HTML.
         setWhiskeyCardUI: function () {
             var whiskeyArrayLength = this.filteredWhiskies.length === 2;
             whiskeyArrayLength ? this.twoWhiskey = true : this.twoWhiskey = false;
         },
 
+        // Sets the activeBtn(region). Calls the necessary filtering function regarding the activeBtn to set the filteredWhiskies array, calls the function which clears the array plus calls the setWhiskeyCardUI function if UI change needed.
         setActiveRegion: function (btn) {
             this.activeBtn = btn;
             this.clearFilteredWhiskies();
+
+            // btn == 'all'
             if (btn == 'all') {
                 this.getAllWhiskies();
             } else {
@@ -77,8 +81,5 @@ var app = new Vue({
             }
             this.regions.sort();
         }
-
-
-
     }
 });
