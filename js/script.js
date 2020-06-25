@@ -10,6 +10,7 @@ var app = new Vue({
         twoWhiskey: false
 
     },
+    
 
     created: function () {
         this.getLocalData('whiskies.json', 'allWhiskies');
