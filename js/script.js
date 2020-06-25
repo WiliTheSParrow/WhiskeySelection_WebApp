@@ -70,7 +70,7 @@ var app = new Vue({
             window.open(this.articles[0].url + uri, '_blank');
         },
 
-        // Collects and sorts the regions from JSON file to set up the menu bar on the UI.
+        // Collects, pushes and sorts the regions from JSON file to regions array to set up the menu bar on the UI.
         collectRegions: function () {
             this.allWhiskies.map(el => {
                 if (!this.regions.includes(el.region)) {
