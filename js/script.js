@@ -53,14 +53,11 @@ var app = new Vue({
 
         // Fills the filteredWhiskies array with the active region whiskies.
         fillFilteredWhiskies: function (region) {
-            for (var i = 0; i < this.allWhiskies.length; i++) {
-                if (this.activeBtn == region && this.allWhiskies[i].region == region) {
-                    this.filteredWhiskies.push(this.allWhiskies[i]);
+            this.allWhiskies.map(el => {
+                if (this.activeBtn == region && el.region == region) {
+                    this.filteredWhiskies.push(el);
                 }
-            }
-
-
-            //
+            });
         },
 
         getAllWhiskies: function () {
