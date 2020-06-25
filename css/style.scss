@@ -29,8 +29,6 @@ $color-grey-light-2: #f2f3f3;
         }
 
         ;
-
-        // 544px
     }
 
     @if $breakpoint==tab-port {
@@ -39,8 +37,6 @@ $color-grey-light-2: #f2f3f3;
         }
 
         ;
-
-        // 900px
     }
 
     @if $breakpoint==tablet {
@@ -49,8 +45,6 @@ $color-grey-light-2: #f2f3f3;
         }
 
         ;
-
-        // 1136px
     }
 
     @if $breakpoint==desktop {
@@ -59,8 +53,6 @@ $color-grey-light-2: #f2f3f3;
         }
 
         ;
-
-        // 1648px
     }
 
     @if $breakpoint==big-desktop {
@@ -69,10 +61,7 @@ $color-grey-light-2: #f2f3f3;
         }
 
         ;
-
-        // 1800px
     }
-
 }
 
 ///////////////////////////////////////
@@ -118,19 +107,16 @@ html {
     font-size: 50%; //1 rem = 10px; 10px/16px=62.5%
 
     @include respond(tablet) {
-        // width < 1200?
-        font-size: 47%; //1rem = 9px, 9/16 = 50%
+        font-size: 47%;
     }
 
     @include respond(tab-port) {
-        // width < 900?
-        font-size: 35%; //1rem = 8px, 8/16 = 50%
+        font-size: 35%;
     }
 
     @include respond(big-desktop) {
-        font-size: 68%; //1rem = 12, 12/16
+        font-size: 68%;
     }
-
 }
 
 body {
@@ -205,7 +191,6 @@ body {
         }
 
         @include btnanimation;
-
     }
 
     .active {
@@ -236,7 +221,6 @@ body {
     }
 
     &__whiskeys {
-        // border: 2px solid orangered;
         margin: 5rem 0;
         display: flex;
         flex-wrap: wrap;
@@ -265,11 +249,9 @@ body {
 
             @include respond(tab-port) {
                 height: 50rem;
-
             }
 
             .feature-box {
-
                 &--desc {
                     grid-row: 4;
                     grid-column: 2;
@@ -409,7 +391,6 @@ body {
             padding: 2rem 2rem;
             border-radius: 0;
             margin: 0;
-
         }
 
         &-titles {
@@ -431,7 +412,6 @@ body {
 
 
             }
-
 
             &--title {
                 width: 60%;
@@ -465,6 +445,7 @@ body {
     color: #444;
 
     a {
+
         &,
         &:link,
         &:visited {
@@ -472,7 +453,7 @@ body {
         }
     }
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
         padding: 1rem 0;
     }
 }
