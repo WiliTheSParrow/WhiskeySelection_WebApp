@@ -13,7 +13,7 @@
 * [Contact](#contact)
 
 ## General info
-Whiskey Selection is a single page web application to get to know some of the whiskey selectons from Scotland. You can filter them regionally if you are interested in a specific type. This project was built using HTML, SCSS and Vue JS. Data is dinamically fetch from JSON files.
+Whiskey Selection is a single page web application to get to know some of the whiskies from Scotland. You can filter them regionally if you are interested in a specific type. This project was built using HTML, SCSS and Vue JS. Data is dinamically fetch from JSON files.
 
 ## Technologies
 * Vue.js
@@ -22,7 +22,7 @@ Whiskey Selection is a single page web application to get to know some of the wh
 * JSON
 
 ## Check out this project:
-<a href="https://whiskey-web-app.web.app/">🥃</a>
+<a href="https://whiskey-web-app.web.app/" _target="blank">🥃</a>
 
 ## Features
 * Version 1.0
@@ -32,4 +32,4 @@ Project is: _finished_
 
 ## Contact
 Created by [@wjulia91](https://www.linkedin.com/in/wjulia91/) - feel free to contact me!
-<a href="https://juliawilhelm.org/">https://juliawilhelm.org/</a>
+<a href="https://juliawilhelm.org/" _target="blank">https://juliawilhelm.org/</a>
